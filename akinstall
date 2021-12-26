@@ -17,15 +17,7 @@ apt-get -qq install sudo -y
 sudo apt-get -qq install net-tools
 
 # test for the main folder
-if [ -d "/root/hxsy" ] ; then
-	echo "The folder /root/hxsy already exists, please rename or delete it before running the script."
-	echo "Delete existing folder? (y/n)"
-	read INVAR
-	if [ "$INVAR" != "y" ] && [ "$INVAR" != "Y" ] ; then
-		exit
-	fi
-	rm -rf "/root/hxsy"
-fi
+
 mkdir "/root/hxsy" -m 777
 cd "/root/hxsy"
 
